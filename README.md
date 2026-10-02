@@ -2,6 +2,8 @@
 
 把 Minecraft 电路、CC:Tweaked 电脑和游戏外的 Python 程序,通过本地 TCP 套接字连在一起。
 
+> **English documentation: [README.en.md](README.en.md)**
+
 - **作者**:Axolotl114
 - **版本**:0.0.1
 - **MC / 加载器**:1.21.1 / NeoForge 21.1.236
@@ -126,6 +128,13 @@ local event, port, value = os.pullEvent("cc_virtual_coms")
 ./gradlew runServer      # 服务端
 ```
 
+## 致谢
+
+- 模型与贴图改自 **Rew1nd** 的 **Synaxis**
+- 基于 Synaxis、CC:Tweaked 与 Create 构建
+
 ## 许可
 
-MIT
+MIT —— 详见 [LICENSE](LICENSE)。
+
+注意:该文件中所说明的第三方美术素材**不在** MIT 许可范围内。
