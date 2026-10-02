@@ -1,0 +1,67 @@
+# Gradle / ModDevGradle
+.gradle/
+build/
+run/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.eclipse/
+.settings/
+.classpath
+.project
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Logs
+_*.log
+
+# ===========================================================================
+# Everything below is deliberately NOT published.
+#
+# The published repository contains ONLY the mod itself:
+#   build.gradle, settings.gradle, gradle.properties, gradle/, gradlew*
+#   src/                      -- mod source and resources
+#   python/cc_virtual_coms.py -- the Python API library
+#   python/example.py         -- one minimal example
+#   README.md
+# ===========================================================================
+
+# Vendored dependency jars. Declared as prerequisites in neoforge.mods.toml and
+# supplied from ./libs at build time; never bundled into the mod jar, and far too
+# large to publish. Get them from CurseForge/Modrinth instead.
+/libs/
+/pre_mods/
+
+# Extracted reference assets from the Synaxis mod (third-party art) and the
+# Blockbench working files. The textures this mod actually ships live under
+# src/main/resources. Anchored with a leading slash so this does NOT hide them.
+/assets/
+
+# All development tooling and research scripts.
+/tools/
+
+# ESP32 / Arduino firmware.
+/esp32/
+
+# The Python API directory ships exactly two files; ignore the rest (hardware
+# bridge scripts, magnetometer/grip research programs, calibration data, web UI).
+/python/*
+!/python/cc_virtual_coms.py
+!/python/example.py
+
+# Superseded copy of the library.
+/pys/
+
+# Large local artefacts
+*.pdf
+错误报告-*.zip

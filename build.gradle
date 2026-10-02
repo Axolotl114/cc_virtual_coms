@@ -1,0 +1,109 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.78'
+}
+
+tasks.named('wrapper', Wrapper).configure {
+    distributionType = Wrapper.DistributionType.BIN
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    flatDir { dirs 'libs' }
+}
+
+neoForge {
+    version = neo_version
+
+    parchment {
+        mappingsVersion = parchment_mappings_version
+        minecraftVersion = parchment_minecraft_version
+    }
+
+    runs {
+        client {
+            client()
+            gameDirectory = file('run/client')
+            // Override with -PcomsPort=25599 to run several instances side by side.
+            jvmArguments.add("-Dcc_virtual_coms.port=${project.findProperty('comsPort') ?: '25585'}")
+        }
+        server {
+            server()
+            gameDirectory = file('run/server')
+            jvmArguments.add("-Dcc_virtual_coms.port=${project.findProperty('comsPort') ?: '25585'}")
+        }
+        data {
+            data()
+            gameDirectory = file('run/data')
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+dependencies {
+    // ------------------------------------------------------------------
+    // Compile-time API dependencies.
+    //
+    // Every jar below is a *required* runtime prerequisite of this mod and
+    // is declared as such in META-INF/neoforge.mods.toml.  They are supplied
+    // from the local ./libs directory so that the build is reproducible
+    // offline; none of them are bundled into the produced jar.
+    // ------------------------------------------------------------------
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+// Expand gradle.properties values into neoforge.mods.toml.
+tasks.named('processResources', ProcessResources).configure {
+    def expandProps = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            neo_version_range      : neo_version_range,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+            mod_authors            : mod_authors,
+            mod_description        : mod_description,
+    ]
+
+    inputs.properties(expandProps)
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand expandProps
+    }
+}
+
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+                'Specification-Title'     : mod_name,
+                'Specification-Vendor'    : mod_authors,
+                'Specification-Version'   : '1',
+                'Implementation-Title'    : mod_name,
+                'Implementation-Version'  : mod_version,
+                'Implementation-Vendor'   : mod_authors,
+        ])
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+}

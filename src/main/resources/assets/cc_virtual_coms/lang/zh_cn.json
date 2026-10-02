@@ -1,0 +1,32 @@
+{
+  "itemGroup.cc_virtual_coms": "CC Synaxis 虚拟串口",
+
+  "block.cc_virtual_coms.virtual_coms_board": "虚拟串口电路板",
+
+  "cc_virtual_coms.screen.title": "虚拟串口配置",
+  "cc_virtual_coms.screen.com": "串口号",
+  "cc_virtual_coms.screen.apply": "应用",
+  "cc_virtual_coms.screen.ports": "端子列表",
+  "cc_virtual_coms.screen.name": "名称",
+  "cc_virtual_coms.screen.type": "类型",
+  "cc_virtual_coms.screen.direction": "方向",
+  "cc_virtual_coms.screen.direction.tooltip": "out - 电路【读取】这个端子。\n  从 Python / 电脑写入它，即可驱动游戏内的电路。\nin - 电路【驱动】这个端子。\n  从 Python / 电脑读取它，即可观测电路里的值。",
+  "cc_virtual_coms.screen.hint": "out = 电路读它（Python 写这里）    in = 电路驱动它（Python 读这里）",
+  "cc_virtual_coms.screen.value": "当前值 [写入者]",
+  "cc_virtual_coms.screen.add": "添加端子",
+  "cc_virtual_coms.screen.remove": "删除",
+  "cc_virtual_coms.screen.update": "应用修改",
+  "cc_virtual_coms.screen.done": "完成",
+  "cc_virtual_coms.screen.prev": "< 上一页",
+  "cc_virtual_coms.screen.next": "下一页 >",
+  "cc_virtual_coms.screen.empty": "尚未配置任何端子。",
+  "cc_virtual_coms.screen.page": "第 %s / %s 页",
+  "cc_virtual_coms.screen.saveLastValue": "保持最后值",
+  "cc_virtual_coms.screen.connection": "套接字: %s",
+  "cc_virtual_coms.screen.connected": "已连接（%s 个客户端）",
+  "cc_virtual_coms.screen.disconnected": "无外部程序连接",
+  "cc_virtual_coms.screen.listenerDown": "监听未启动",
+
+  "cc_virtual_coms.tooltip.hint": "空手右键打开配置界面",
+  "cc_virtual_coms.tooltip.com": "串口号: %s"
+}

@@ -1,0 +1,32 @@
+{
+  "itemGroup.cc_virtual_coms": "CC Synaxis Virtual Coms",
+
+  "block.cc_virtual_coms.virtual_coms_board": "Virtual Serial Port Board",
+
+  "cc_virtual_coms.screen.title": "Virtual Serial Port",
+  "cc_virtual_coms.screen.com": "Serial port id",
+  "cc_virtual_coms.screen.apply": "Apply",
+  "cc_virtual_coms.screen.ports": "Terminals",
+  "cc_virtual_coms.screen.name": "Name",
+  "cc_virtual_coms.screen.type": "Type",
+  "cc_virtual_coms.screen.direction": "Direction",
+  "cc_virtual_coms.screen.direction.tooltip": "out - the circuit READS this terminal.\n  Write it from Python or a computer to drive the game.\nin - the circuit DRIVES this terminal.\n  Read it from Python or a computer to observe the circuit.",
+  "cc_virtual_coms.screen.hint": "out = circuit reads it (write here)   in = circuit drives it (read here)",
+  "cc_virtual_coms.screen.value": "Value [writer]",
+  "cc_virtual_coms.screen.add": "Add terminal",
+  "cc_virtual_coms.screen.remove": "Remove",
+  "cc_virtual_coms.screen.update": "Apply changes",
+  "cc_virtual_coms.screen.done": "Done",
+  "cc_virtual_coms.screen.prev": "< Prev",
+  "cc_virtual_coms.screen.next": "Next >",
+  "cc_virtual_coms.screen.empty": "No terminals configured yet.",
+  "cc_virtual_coms.screen.page": "Page %s / %s",
+  "cc_virtual_coms.screen.saveLastValue": "Keep last value",
+  "cc_virtual_coms.screen.connection": "Socket: %s",
+  "cc_virtual_coms.screen.connected": "connected (%s client(s))",
+  "cc_virtual_coms.screen.disconnected": "no client connected",
+  "cc_virtual_coms.screen.listenerDown": "listener not running",
+
+  "cc_virtual_coms.tooltip.hint": "Right-click with an empty hand to configure",
+  "cc_virtual_coms.tooltip.com": "Serial port: %s"
+}

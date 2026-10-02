@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "cc_virtual_coms:block/virtual_coms_board/block"
+    },
+    "facing=down": {
+      "model": "cc_virtual_coms:block/virtual_coms_board/block",
+      "x": 180
+    },
+    "facing=north": {
+      "model": "cc_virtual_coms:block/virtual_coms_board/block",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "cc_virtual_coms:block/virtual_coms_board/block",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "cc_virtual_coms:block/virtual_coms_board/block",
+      "x": 90,
+      "y": 270
+    },
+    "facing=east": {
+      "model": "cc_virtual_coms:block/virtual_coms_board/block",
+      "x": 90,
+      "y": 90
+    }
+  }
+}
