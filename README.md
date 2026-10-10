@@ -132,11 +132,9 @@ local event, port, value = os.pullEvent("cc_virtual_coms")
 
 ## 致谢
 
-- 模型与贴图改自 **Rew1nd** 的 **Synaxis**
 - 基于 Synaxis、CC:Tweaked 与 Create 构建
 
 ## 许可
 
 MIT —— 详见 [LICENSE](LICENSE)。
 
-注意:该文件中所说明的第三方美术素材**不在** MIT 许可范围内。
