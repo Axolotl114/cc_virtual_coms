@@ -149,10 +149,8 @@ build needs no mod repository access, and they are not bundled into the output.
 
 ## Credits
 
-- Model and textures are derived from **Synaxis** by **Rew1nd**.
 - Built on Synaxis, CC:Tweaked and Create.
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Note that the third-party art assets described in
-that file are not covered by the MIT license.
+MIT — see [LICENSE](LICENSE).
